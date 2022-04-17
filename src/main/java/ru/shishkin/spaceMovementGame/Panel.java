@@ -15,12 +15,12 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 public class Panel extends JPanel {
-    int x = 50, y = 50;
-    int napravlenie = 4;
-    int speed = 1;
-    int schet = 0;
-    int allschet = 0;
-    int winnerschet = 0;
+    private int x = 50, y = 50;
+    private int napravlenie = 4;
+    private int speed = 1;
+    private int schet = 0;
+    private int allschet = 0;
+    private int winnerschet = 0;
 
     int x2 = 1080, y2 = 460;
     int napravlenie2 = 8;
@@ -125,8 +125,11 @@ public class Panel extends JPanel {
             }
         }
 
-        public void keyTyped(KeyEvent e) {}
-        public void keyReleased(KeyEvent e) {}
+        public void keyTyped(KeyEvent e) {
+        }
+
+        public void keyReleased(KeyEvent e) {
+        }
     }
 
     public Panel() {
