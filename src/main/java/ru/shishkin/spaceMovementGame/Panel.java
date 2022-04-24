@@ -22,21 +22,21 @@ public class Panel extends JPanel {
     private int allschet = 0;
     private int winnerschet = 0;
 
-    int x2 = 1080, y2 = 460;
-    int napravlenie2 = 8;
-    int speed2 = 1;
-    int schet2 = 0;
-    int allschet2 = 0;
-    int winnerschet2 = 0;
+    private int x2 = 1080, y2 = 460;
+    private int napravlenie2 = 8;
+    private int speed2 = 1;
+    private int schet2 = 0;
+    private int allschet2 = 0;
+    private int winnerschet2 = 0;
 
-    int xmeteor = 650, ymeteor = 350;
-    int imagemeteor = 0;
+    private int xmeteor = 650, ymeteor = 350;
+    private int imagemeteor = 0;
 
-    Image fon;
-    Image planeta;
-    Image meteor[] = new Image[5];
-    Timer timer, timer2;
-    int gameover = 3;
+    private Image fon;
+    private Image planeta;
+    private Image meteor[] = new Image[5];
+    private Timer timer, timer2;
+    private int gameover = 3;
 
     private class MyKey implements KeyListener {
         public void keyPressed(KeyEvent e) {
@@ -125,17 +125,13 @@ public class Panel extends JPanel {
             }
         }
 
-        public void keyTyped(KeyEvent e) {
-        }
-
-        public void keyReleased(KeyEvent e) {
-        }
+        public void keyTyped(KeyEvent e) {}
+        public void keyReleased(KeyEvent e) {}
     }
 
     public Panel() {
         addKeyListener(new MyKey());
         setFocusable(true);
-
         //====================================================
         timer = new Timer(10, new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -330,7 +326,7 @@ public class Panel extends JPanel {
         checkgame();
     }
 
-    public void checkgame() {
+    private void checkgame() {
         if (x - 50 < xmeteor && xmeteor < x + 150 && y - 50 < ymeteor && ymeteor < y + 150) {
             Random rnd = new Random();
             xmeteor = 200 + rnd.nextInt(850);
@@ -341,7 +337,6 @@ public class Panel extends JPanel {
             schet = schet + 1;
             allschet = allschet + 1;
         }
-
         if (x2 - 50 < xmeteor && xmeteor < x2 + 150 && y2 - 50 < ymeteor && ymeteor < y2 + 150) {
             Random rnd = new Random();
             xmeteor = 200 + rnd.nextInt(850);
@@ -352,7 +347,6 @@ public class Panel extends JPanel {
             schet2 = schet2 + 1;
             allschet2 = allschet2 + 1;
         }
-
         if (gameover > 0) {
             timer.stop();
             timer2.stop();
