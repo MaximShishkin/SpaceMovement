@@ -1,6 +1,6 @@
-package ru.shishkin.spaceMovementGame;
+package ru.shishkin.maxim.spaceMovement;
 
-public class Application {
+public class App {
     public static void main(String[] args) {
         new Frame();
     }

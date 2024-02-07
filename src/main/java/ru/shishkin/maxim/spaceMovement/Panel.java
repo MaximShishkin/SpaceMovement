@@ -1,4 +1,4 @@
-package ru.shishkin.spaceMovementGame;
+package ru.shishkin.maxim.spaceMovement;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -125,8 +125,11 @@ public class Panel extends JPanel {
             }
         }
 
-        public void keyTyped(KeyEvent e) {}
-        public void keyReleased(KeyEvent e) {}
+        public void keyTyped(KeyEvent e) {
+        }
+
+        public void keyReleased(KeyEvent e) {
+        }
     }
 
     public Panel() {

@@ -1,4 +1,4 @@
-package ru.shishkin.spaceMovementGame;
+package ru.shishkin.maxim.spaceMovement;
 
 import java.awt.Image;
 import java.io.IOException;
